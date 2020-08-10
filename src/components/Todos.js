@@ -9,7 +9,7 @@ class Todos extends Component {
   render() {
     return this.props.todos.map((todo) => (
       <TodoItem key = {todo.id} todo={todo} markComplete=
-      {this.markComplete} />
+      {this.props.markComplete} />
     ));
   } 
 }
