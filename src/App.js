@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {v5 as uuid} from 'uuid';
 import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
 import Header from './components/layout/Header';
@@ -9,17 +10,17 @@ class App extends Component {
   state = {
     todos: [
       {
-        id: 1,
+        id: uuid.v5,
         title: 'Take out the trash',
         completed: false
       },
       {
-        id: 2,
+        id: uuid.v5,
         title: 'do a thing',
         completed: false
       },
       {
-        id: 3,
+        id: uuid.v5,
         title: 'Take out the trash again',
         completed: false
       },
@@ -45,7 +46,7 @@ delTodo = (id) => {
 //add Todo
 addTodo = (title) => {
   const newTodo = {
-    id: 4,
+    id: uuid.v5,
     title,
     completed: false
   }
